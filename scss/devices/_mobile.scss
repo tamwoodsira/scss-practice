@@ -1,0 +1,266 @@
+/* For desktop version
+Gustavo's version
+aside:hover div {
+    animation: profile-hover 1s ease-in-out;
+    opacity: 1;
+}
+
+aside:hover div {
+    animation: profile-hover 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    opacity: 1;
+    //visibility: visible;
+        }
+*/
+
+
+@media (min-width: 300px) {
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        article {
+            @include flexBox(column,center,center,20px);
+        }
+
+        .project {
+            width: 50vh;
+            height: 50vh;
+            @include flexBox();
+            /*
+            Gustavo's Version
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat
+            */
+        }
+
+        .project-1 {
+            @extend .project;
+            background: url("/img/p1.jpg");
+        }
+
+        .project-2 {
+            @extend .project;
+            background: url("/img/p2.jpg");
+        }
+
+        .project-3 {
+            @extend .project;
+            background: url("/img/p3.jpg");
+        }
+
+        .project-4 {
+            @extend .project;
+            background: url("/img/p4.jpg");
+        }
+
+        .project-5 {
+            @extend .project;
+            background: url("/img/p5.jpg");
+        }
+
+        .project-6 {
+            @extend .project;
+            background: url("/img/p6.jpg");
+        }
+
+        .project-7 {
+            @extend .project;
+            background: url("/img/p7.jpg");
+        }
+
+        .project-8 {
+            @extend .project;
+            background: url("/img/p8.jpg");
+        }
+    }
+
+    .team {
+        padding: 4%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        %btn-profile {
+            background-color: $defaultColor;
+            color: white;
+            padding: 3%;
+            text-decoration: none;
+        }
+
+        [class*="profile-"] {
+            @include flexBox(column,center,center,15px);
+            color: black;
+
+            & a {
+                @extend %btn-profile;
+            }
+        }
+
+        aside {
+            display: flex;
+            width: 50vh;
+            height: 50vh;
+            border-radius: 50%;
+        }
+
+        .profile-1 > aside {
+            @include bgBox("/img/member1.png",center,cover); //set 'cover' instead of contain
+            display: flex; 
+            width: 50vh;
+            height: 50vh;
+            border-radius: 50%; //get rid of the background-border
+        }
+
+        .profile-2 > aside {
+            @include bgBox("/img/member2.png",center,cover);
+        }
+
+        .profile-3 > aside {
+            @include bgBox("/img/member3.png",center,cover);
+        }
+
+        .profile-4 > aside {
+            @include bgBox("/img/member4.png",center,cover);
+        }
+
+        aside h3 {
+            color: white;
+            border-color: white
+        }
+
+        aside > div {
+            color: white;
+            background-color: $defaultColor;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            @include flexBox(column,center,center,25px); //text will be in the middle
+            opacity: 0;
+            //visibility: hidden;
+        }
+
+        [class^="fa-"] {
+            color: white;
+        }
+
+        %innerHeader {
+            color: $defaultColor;
+            border-color: $defaultColor;
+        }
+
+        h2 {
+            @extend %innerHeader;
+        }
+
+        h3 {
+            @extend %innerHeader;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            padding-bottom: 15%;
+        }
+
+        .progress-section {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .progress-section > div {
+            height: 5vh;
+            background-color: whitesmoke;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        %progress-span {
+            background-color: $defaultColor;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .html-css {
+            @extend %progress-span;
+            width: 83%;
+        }
+
+        .javascript {
+            @extend %progress-span;
+            width: 75%;
+        }
+
+        .react {
+            @extend %progress-span;
+            width: 90%;
+        }
+
+        .version-control {
+            @extend %progress-span;
+            width: 89%;
+        }
+
+    }
+
+    .contact {
+        padding: 2%;
+        @include flexBox(column,unset,unset,20px); // set 'unset' to align-items
+
+        > h2 {
+            color: $defaultColor;
+            border-color: $defaultColor;
+        }
+
+        > p {
+            @include flexBox(column,unset,unset,20px);
+        }
+
+        form {
+            padding: 3%;
+            @include flexBox(column,unset,center,30px);
+            /* display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 30px; */
+        }
+        
+        [type="text"], [type="email"], textarea {
+            @include borderbox(darkgray);
+            font-size: 16px;
+            padding: 3%;
+            font-family: $defaultFont;
+            width: 80%;
+        }
+
+        [type="submit"] {
+            padding: 3%;
+            background-color: $defaultColor;
+            color: white;
+            width: 86%;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        textarea {
+            height: 30vh;
+        }
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+}
