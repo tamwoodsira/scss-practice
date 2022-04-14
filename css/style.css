@@ -167,6 +167,10 @@ aside:hover div {
             align-items: center;
     row-gap: 30px;
   }
+  .service > h2 {
+    color: #EC523F;
+    border-color: #EC523F;
+  }
   .service article {
     width: 50vh;
     height: 50vh;
@@ -257,6 +261,7 @@ aside:hover div {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 50px;
+    padding: 2%;
   }
   .gallery article {
     display: -webkit-box;
@@ -277,6 +282,10 @@ aside:hover div {
     row-gap: 20px;
     -webkit-column-gap: 0px;
             column-gap: 0px;
+  }
+  .gallery > h2 {
+    color: #EC523F;
+    border-color: #EC523F;
   }
   .gallery .project, .gallery .project-1, .gallery .project-2, .gallery .project-3, .gallery .project-4, .gallery .project-5, .gallery .project-6, .gallery .project-7, .gallery .project-8 {
     width: 50vh;

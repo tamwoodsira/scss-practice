@@ -87,6 +87,11 @@ aside:hover div {
         align-items: center;
         row-gap: 30px;
 
+        > h2 {
+            color: $defaultColor;
+            border-color: $defaultColor;
+        }
+
         article {
             width: 50vh;
             height: 50vh;
@@ -154,9 +159,15 @@ aside:hover div {
         display: flex;
         flex-direction: column;
         row-gap: 50px;
+        padding: 2%;
 
         article {
             @include flexBox(column,center,center,20px);
+        }
+
+        > h2 {
+            color: $defaultColor;
+            border-color: $defaultColor;
         }
 
         .project {
