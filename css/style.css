@@ -38,6 +38,24 @@ h2, h3 {
   }
 }
 
+@-webkit-keyframes hamburger {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+@keyframes hamburger {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
 /* For desktop version
 Gustavo's version
 aside:hover div {
@@ -52,9 +70,89 @@ aside:hover div {
     animation-iteration-count: 1;
     opacity: 1;
     //visibility: visible;
-        }
+}
 */
 @media (min-width: 300px) {
+  .header {
+    height: 80vh;
+    background-attachment: fixed;
+    background: url("/img/volcano.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5%;
+  }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    background-color: white;
+    padding: 3%;
+    position: fixed;
+    width: 80%;
+    z-index: 3;
+  }
+  .header ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-color: white;
+    padding: 3%;
+    width: 100%;
+    row-gap: 20px;
+  }
+  .header ul a {
+    text-decoration: none;
+    color: darkgray;
+    text-transform: uppercase;
+  }
+  .header .fa-bars {
+    color: white;
+    background-color: #EC523F;
+    padding: 2%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-decoration: none;
+  }
+  .header [data-id="display"] {
+    z-index: 5;
+    -webkit-animation: hamburger 0.5s ease-in-out;
+            animation: hamburger 0.5s ease-in-out;
+  }
+  .header [data-id="display"]:active {
+    -webkit-animation: hamburger 0.5s ease-in-out;
+            animation: hamburger 0.5s ease-in-out;
+  }
+  .header [data-id="hidden"] {
+    z-index: 4;
+    display: none;
+  }
+  .header [data-id="hidden"]:active {
+    -webkit-animation: hamburger 0.5s ease-in-out;
+            animation: hamburger 0.5s ease-in-out;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
   .service {
     padding: 3%;
     display: -webkit-box;
@@ -286,9 +384,6 @@ aside:hover div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 50vh;
-    height: 50vh;
-    border-radius: 50%;
   }
   .team .profile-2 > aside {
     background: url("/img/member2.png");
@@ -493,8 +588,102 @@ aside:hover div {
   .contact textarea {
     height: 30vh;
   }
-  .footer {
+  footer {
     text-align: center;
+  }
+}
+
+@media (min-width: 700px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .service {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 50px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .service h2 {
+    width: 100%;
+    color: #EC523F;
+    border-bottom: 3px solid #EC523F;
+  }
+  .service > p {
+    width: 100%;
+  }
+  .service article {
+    width: 25vh;
+    height: 25vh;
+  }
+  .service article p {
+    padding: 3%;
+  }
+  .gallery {
+    padding: 4%;
+  }
+  .gallery h2 {
+    color: #EC523F;
+    border-bottom: 3px solid #EC523F;
+  }
+  .gallery article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    row-gap: 50px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .gallery [class^="project-"] {
+    width: 20vh;
+    height: 20vh;
+    background-size: cover;
+  }
+  .team .profiles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 50px;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+  }
+  .team aside {
+    width: 20vh;
+    height: 20vh;
+  }
+  .contact {
+    padding: 4%;
+  }
+  .contact p, .contact address {
+    padding-left: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

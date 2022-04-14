@@ -12,11 +12,73 @@ aside:hover div {
     animation-iteration-count: 1;
     opacity: 1;
     //visibility: visible;
-        }
+}
 */
 
 
 @media (min-width: 300px) {
+
+    .header {
+        height: 80vh;
+        background-attachment: fixed;
+        @include bgBox("/img/volcano.jpg",center,cover);
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            background-color: white;
+            padding: 3%;
+            position: fixed;
+            width: 80%;
+            z-index: 3;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: white;
+            padding: 3%;
+            width: 100%;
+            row-gap: 20px;
+
+            a {
+                text-decoration: none;
+                color: darkgray;
+                text-transform: uppercase;
+            }
+        }
+
+        .fa-bars {
+            color: white;
+            background-color: $defaultColor;
+            padding: 2%;
+            height: fit-content;
+            text-decoration: none;
+        }
+
+        [data-id="display"] {
+            z-index: 5;
+            animation: hamburger 0.5s ease-in-out;
+            &:active {
+                animation: hamburger 0.5s ease-in-out;
+            }
+        }
+
+        [data-id="hidden"] {
+            z-index: 4;
+            display: none;
+            &:active {
+                animation: hamburger 0.5s ease-in-out;
+                animation-direction: alternate;
+            }
+        }
+    }
 
     .service {
         padding: 3%;
@@ -32,11 +94,11 @@ aside:hover div {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
+            position: relative; //the element will respect the size of the father
         }
 
         article > p {
-            position: absolute;
+            position: absolute; //setting the z-index
             width: 100%;
             height: 100%;
             font-size: 16px;
@@ -62,7 +124,7 @@ aside:hover div {
             justify-content: center;
             align-items: center;
             text-align: center;
-            opacity: 0;
+            opacity: 0; //will always see the icon
             z-index: 1;
         }
 
@@ -182,9 +244,6 @@ aside:hover div {
         .profile-1 > aside {
             @include bgBox("/img/member1.png",center,cover); //set 'cover' instead of contain
             display: flex; 
-            width: 50vh;
-            height: 50vh;
-            border-radius: 50%; //get rid of the background-border
         }
 
         .profile-2 > aside {
@@ -329,7 +388,7 @@ aside:hover div {
         }
     }
 
-    .footer {
+    footer {
         text-align: center;
     }
 

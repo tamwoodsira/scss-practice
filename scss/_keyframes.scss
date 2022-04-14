@@ -7,3 +7,14 @@
         opacity: 1;
     }
 }
+
+
+@keyframes hamburger {
+    from {
+        display: none;
+    }
+
+    to {
+        display: block;
+    }
+}

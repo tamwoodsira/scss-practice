@@ -1,0 +1,85 @@
+@media (min-width: 700px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .service {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 30px;
+        justify-content: space-evenly;
+
+        h2 {
+            width: 100%;
+            color: $defaultColor;
+            border-bottom: 3px solid $defaultColor;
+        }
+
+        > p {
+            width: 100%;
+        }
+
+        article {
+            width: 25vh;
+            height: 25vh;
+
+            p {
+                padding: 3%;
+            }
+        }
+    }
+
+    .gallery {
+        padding: 4%;
+
+        h2 {
+            color: $defaultColor;
+            border-bottom: 3px solid $defaultColor;
+        }
+
+        article {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 50px;
+            column-gap: 20px;
+        }
+
+        [class^="project-"] {
+            width: 20vh;
+            height: 20vh;
+            background-size: cover;
+        }
+    }
+
+    .team {
+        .profiles {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 50px;
+        }
+
+        aside {
+            width: 20vh;
+            height: 20vh;
+        }
+    }
+
+    .contact {
+        padding: 4%;
+
+        p, address {
+            padding-left: 10%;
+        }
+    }
+
+}
