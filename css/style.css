@@ -55,6 +55,101 @@ aside:hover div {
         }
 */
 @media (min-width: 300px) {
+  .service {
+    padding: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 30px;
+  }
+  .service article {
+    width: 50vh;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  .service article > p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 10px;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    z-index: 2;
+  }
+  .service [class*="fa-brands"], .service [class*="fa-solid"] {
+    color: white;
+    font-size: 180px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+  }
+  .service .html-5, .service .html-5 > p {
+    background-color: #1ABC9C;
+  }
+  .service .database, .service .database > p {
+    background-color: #3498DB;
+  }
+  .service .sass, .service .sass > p {
+    background-color: #E67E22;
+  }
+  .service .fullstack, .service .fullstack > p {
+    background-color: #2ECC71;
+  }
+  .service span {
+    text-transform: capitalize;
+    border-bottom: 3px solid white;
+  }
   .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
